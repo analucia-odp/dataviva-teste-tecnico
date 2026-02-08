@@ -17,8 +17,10 @@ def data_clustering_by_category(input_list):
         category = item["categoria"]
         value = item["valor"]
         
+        # Check if the category already exists in the totals dictionary
         if category in category_totals:
             category_totals[category] += value
+        # If the category does not exist, initialize it with the current value
         else:
             category_totals[category] = value
             
