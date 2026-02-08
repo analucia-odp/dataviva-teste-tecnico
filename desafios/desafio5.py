@@ -6,6 +6,11 @@ input = [
 ]
 
 def data_clustering_by_category(input_list):
+    """ This function takes a list of dictionaries, 
+    where each dictionary contains a 'categoria' and a 'valor'.
+    It returns a new dictionary where the keys are the 
+    unique categories and the values are the total"""
+    
     category_totals = {}
     
     for item in input_list:
