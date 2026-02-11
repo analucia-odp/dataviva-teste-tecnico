@@ -1,75 +1,84 @@
-# 🚀 Desafio Técnico - Bolsa de Pesquisa (DataViva)
+# Desafios — Implementações
 
-Bem-vindo(a) ao desafio técnico para a vaga de Bolsa de Pesquisa em Engenharia de Software no DataViva!
+Este repositório contém soluções para os desafios na pasta `desafios`.
 
-Este teste tem como objetivo avaliar sua **lógica de programação** e familiaridade com **estruturas de dados**. Não buscamos código perfeito, mas sim entender como você pensa e resolve problemas.
+Cada seção abaixo descreve a implementação presente em cada arquivo.
 
-## 📋 Instruções Gerais
-
-1.  **Linguagem:** Você pode resolver os desafios utilizando **Python** ou **JavaScript/TypeScript**. Escolha a que você se sentir mais confortável.
-2.  **Organização:** Separe cada desafio em um arquivo ou função diferente. Ex: `desafio1.js`, `desafio2.py`, etc.
-3.  **Comentários:** Comente seu código explicando sua linha de raciocínio, especialmente se tomar alguma decisão de design.
+Participante: Ana Lucia Oliveira de Paula.
 
 ---
 
-## 🧩 Os Desafios
+## Desafio 1 — FizzBuzz
+- Arquivo: [desafios/desafio1.py](desafios/desafio1.py)
+- Descrição: Implementação do clássico FizzBuzz. A função `get_special_print(num)` retorna "Fizz" para múltiplos de 3, "Buzz" para múltiplos de 5, "FizzBuzz" para múltiplos de ambos e string vazia caso contrário. A função `fizz_buzz()` imprime os números de 1 a 100 substituindo conforme a regra.
+- Execução: `python desafios/desafio1.py`
+- Saída esperada (exemplo parcial):
 
-### 1. O Clássico FizzBuzz
-Escreva um programa que imprima os números de 1 a 100.
-* Para múltiplos de **3**, imprima `Fizz` em vez do número.
-* Para múltiplos de **5**, imprima `Buzz` em vez do número.
-* Para números múltiplos de **3 e 5** ao mesmo tempo, imprima `FizzBuzz`.
-
-### 2. Verificador de Palíndromo
-Crie uma função que receba uma palavra (string) e retorne `true` se ela for um palíndromo e `false` caso contrário.
-* *Definição:* Palíndromo é uma palavra que pode ser lida da mesma forma de trás para frente.
-* **Exemplos:** `"arara"` (true), `"ovo"` (true), `"casa"` (false).
-
-### 3. Encontrar Duplicados
-Dada uma lista de números inteiros, escreva uma função que identifique e retorne o número que aparece repetido.
-* **Entrada:** `[1, 2, 3, 4, 2, 5]`
-* **Saída Esperada:** `2`
-
-### 4. Validação de Parênteses
-Dada uma string contendo apenas os caracteres `(`, `)`, `{`, `}`, `[` e `]`, determine se a string é válida.
-Uma string é válida se:
-1.  Os parênteses abertos são fechados pelo mesmo tipo de parênteses.
-2.  Os parênteses abertos são fechados na ordem correta.
-* **Exemplos:**
-    * `{[()]}` ✅ Válido
-    * `{[(])}` ❌ Inválido (ordem errada)
-    * `{{[[(]]}}` ❌ Inválido (falta fechar)
-
-### 5. Manipulação de Dados (Bônus)
-
-Este desafio simula um cenário comum no DataViva: agrupar dados para visualização.
-Dado um array de objetos representando transações:
-
-```json
-[
-  { "categoria": "Alimentação", "valor": 10 },
-  { "categoria": "Transporte", "valor": 5 },
-  { "categoria": "Alimentação", "valor": 20 },
-  { "categoria": "Lazer", "valor": 50 }
-]
 ```
-Escreva uma função que retorne um objeto (ou dicionário) somando os valores por categoria.
-
-* **Saída Esperada:** 
-
-```json
-{
-  "Alimentação": 30,
-  "Transporte": 5,
-  "Lazer": 50
-}
+1
+2
+Fizz
+4
+Buzz
+...
+FizzBuzz
 ```
-## 📤 Como entregar
-Crie um repositório no seu GitHub (pode ser público).
 
-Faça o upload dos seus códigos.
+---
 
-Envie o link do repositório para o e-mail da vaga (dataviva.info@gmail.com) com o assunto: Desafio Técnico - [Seu Nome].
+## Desafio 2 — Verificador de Palíndromo
+- Arquivo: [desafios/desafio2.py](desafios/desafio2.py)
+- Descrição: Leitor interativo que pergunta por uma palavra (ou frase simples) e verifica se é palíndromo usando `is_palindrome(word)` (ignora maiúsculas/minúsculas). O programa roda em loop até o usuário digitar `quit`.
+- Execução: `python desafios/desafio2.py`
+- Exemplo de uso:
 
-## 🚀 Boa sorte! 
+```
+Enter a word to check if it's a palindrome (or 'quit' to exit): radar
+True
+```
 
+---
+
+## Desafio 3 — Identificação de Duplicados
+- Arquivo: [desafios/desafio3.py](desafios/desafio3.py)
+- Descrição: Lê uma lista de números a partir de uma string no formato `[1,2,3]`, converte para inteiros e retorna os valores duplicados. A função auxiliar `count_occurrences(lst, item)` conta aparições (com comportamento de saída precoce quando já passou de 1).
+- Execução: `python desafios/desafio3.py`
+- Entrada esperada: algo como `[1,2,3,2,4,1]`
+- Saída esperada: `Duplicates found: [1, 2]`
+
+---
+
+## Desafio 4 — Validação de Parênteses
+- Arquivo: [desafios/desafio4.py](desafios/desafio4.py)
+- Descrição: Implementa validação de parênteses/colchetes/chaves aninhados com `validate_parentheses(s)`. Usa pilha para rastrear aberturas e verifica fechamentos com `validate_closing_parentheses(stack, char)`. Inclui um conjunto de testes simples que exercitam casos válidos e inválidos.
+- Execução: `python desafios/desafio4.py`
+
+---
+
+## Desafio 5 — Agrupamento por Categoria (soma de valores)
+- Arquivo: [desafios/desafio5.py](desafios/desafio5.py)
+- Descrição: Recebe uma lista de dicionários com chaves `categoria` e `valor` e retorna um dicionário com a soma dos valores por categoria. Função principal: `data_clustering_by_category(input_list)`.
+- Execução: `python desafios/desafio5.py`
+- Exemplo de entrada (no próprio arquivo):
+
+```
+[{'categoria': 'Alimentação', 'valor': 10},
+ {'categoria': 'Transporte', 'valor': 5},
+ {'categoria': 'Alimentação', 'valor': 20},
+ {'categoria': 'Lazer', 'valor': 50}]
+```
+- Saída esperada:
+
+```
+{'Alimentação': 30, 'Transporte': 5, 'Lazer': 50}
+```
+
+---
+
+## Como executar
+- Recomendado: Python 3.8+ instalado.
+- Comando geral para rodar um desafio (exemplo `desafio2`):
+
+```bash
+python desafios/desafio2.py
+```
