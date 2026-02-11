@@ -59,7 +59,7 @@ True
 - Arquivo: [desafios/desafio5.py](desafios/desafio5.py)
 - Descrição: Recebe uma lista de dicionários com chaves `categoria` e `valor` e retorna um dicionário com a soma dos valores por categoria. Função principal: `data_clustering_by_category(input_list)`.
 - Execução: `python desafios/desafio5.py`
-- Exemplo de entrada (no próprio arquivo):
+- Exemplo de entrada está contido na pasta desafios/inputs/desafio5_input.csv em que é contido um csv que é formatado da seguinte forma ao final:
 
 ```
 [{'categoria': 'Alimentação', 'valor': 10},

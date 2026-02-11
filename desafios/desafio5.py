@@ -1,9 +1,4 @@
-input = [
-  { "categoria": "Alimentação", "valor": 10 },
-  { "categoria": "Transporte", "valor": 5 },
-  { "categoria": "Alimentação", "valor": 20 },
-  { "categoria": "Lazer", "valor": 50 }
-]
+import csv
 
 def data_clustering_by_category(input_list):
     """ This function takes a list of dictionaries, 
@@ -26,4 +21,15 @@ def data_clustering_by_category(input_list):
             
     return category_totals
 
-print(data_clustering_by_category(input))
+def main():
+    # Read the CSV file and convert it to a list of dictionaries
+    input = [] 
+    with open('desafios/inputs/desafio5_input.csv', mode='r') as file:
+        csv_reader = csv.DictReader(file)
+        for row in csv_reader:
+            # Convert the 'valor' field to an integer
+            row['valor'] = int(row['valor'])
+            input.append(row)
+    print(data_clustering_by_category(input))
+
+main()
