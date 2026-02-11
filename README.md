@@ -4,7 +4,7 @@ Este repositório contém soluções para os desafios na pasta `desafios`.
 
 Cada seção abaixo descreve a implementação presente em cada arquivo.
 
-Participante: Ana Lucia Oliveira de Paula.
+**Participante:** Ana Lucia Oliveira de Paula.
 
 ---
 
